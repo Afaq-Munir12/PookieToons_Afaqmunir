@@ -1,0 +1,589 @@
+import { t as pookietoons_logo_default } from "./pookietoons-logo-Cf5M0_yj.js";
+import { t as ThemeToggle } from "./theme-toggle-D0G8Aa3m.js";
+import { Link } from "@tanstack/react-router";
+import { jsx, jsxs } from "react/jsx-runtime";
+import { Apple, ArrowUpRight, Clapperboard, Facebook, Heart, Instagram, Mail, Megaphone, Music2, Play, ShoppingBag, Smartphone, Snowflake, Sparkles, Star, Wand2 } from "lucide-react";
+//#region src/routes/index.tsx?tsr-split=component
+var SOCIALS = [
+	{
+		name: "TikTok",
+		handle: "@pookiiee_toons",
+		followers: "22K",
+		meta: "390.5K likes",
+		url: "https://www.tiktok.com/@pookiiee_toons",
+		Icon: Music2,
+		color: "var(--color-magenta)"
+	},
+	{
+		name: "Instagram",
+		handle: "@pookiie_toons",
+		followers: "10K",
+		meta: "38 posts",
+		url: "https://www.instagram.com/pookiie_toons/",
+		Icon: Instagram,
+		color: "var(--color-tangerine)"
+	},
+	{
+		name: "Facebook",
+		handle: "Afaq Munir",
+		followers: "18K",
+		meta: "Storytelling channel",
+		url: "https://www.facebook.com/profile.php?id=61588215682177",
+		Icon: Facebook,
+		color: "var(--color-sky-pop)"
+	}
+];
+var SERIES = [
+	{
+		title: "Fairy Tales, Reimagined",
+		tag: "Ongoing series",
+		desc: "Classic bedtime tales rebuilt with AI animation — new twists, new characters, the same warm magic.",
+		Icon: Wand2,
+		tint: "var(--color-magenta)"
+	},
+	{
+		title: "Fruit Stories",
+		tag: "Fan favourite",
+		desc: "Cheeky talking fruits getting into wholesome trouble. Short, snackable, very re-watchable.",
+		Icon: Apple,
+		tint: "var(--color-tangerine)"
+	},
+	{
+		title: "Drama Shorts",
+		tag: "Episodic",
+		desc: "Mini-dramas with feelings, plot twists and tiny monsters. Released part-by-part.",
+		Icon: Clapperboard,
+		tint: "var(--color-sky-pop)"
+	},
+	{
+		title: "Seasonal Specials",
+		tag: "Limited drops",
+		desc: "Themed episodes for every season — cozy autumns, sparkly winters, sunny adventures.",
+		Icon: Snowflake,
+		tint: "var(--color-mint)"
+	}
+];
+var ADS = [
+	{
+		title: "Short-Form Video Ads",
+		tag: "TikTok · Reels · Shorts",
+		desc: "Hook-first 15–60s AI ads built for TikTok, Instagram Reels and YouTube Shorts — designed to stop the scroll and drive clicks.",
+		Icon: Megaphone,
+		tint: "var(--color-magenta)"
+	},
+	{
+		title: "Feed & Story Ads",
+		tag: "Instagram · Facebook",
+		desc: "Polished vertical and square ad creatives for Instagram Stories, Facebook Feed and Reels placements.",
+		Icon: Smartphone,
+		tint: "var(--color-tangerine)"
+	},
+	{
+		title: "Product & Brand Ads",
+		tag: "E-com · Launches",
+		desc: "Animated product showcases, launch teasers and brand explainers with AI-generated characters and scenes.",
+		Icon: ShoppingBag,
+		tint: "var(--color-sky-pop)"
+	},
+	{
+		title: "Custom AI Ad Concepts",
+		tag: "Made to order",
+		desc: "From script to final render — bespoke AI ad concepts tailored to your product, audience and campaign goals.",
+		Icon: Sparkles,
+		tint: "var(--color-mint)"
+	}
+];
+function Portfolio() {
+	return /* @__PURE__ */ jsxs("div", {
+		className: "min-h-screen overflow-x-hidden",
+		children: [
+			/* @__PURE__ */ jsx("header", {
+				className: "sticky top-0 z-50 mx-auto max-w-6xl px-5 py-4",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "flex items-center justify-between rounded-full border-2 border-foreground/10 bg-card/85 px-5 py-3 shadow-pop-sm backdrop-blur-md",
+					children: [
+						/* @__PURE__ */ jsxs("a", {
+							href: "#top",
+							className: "flex items-center gap-2 font-display text-lg font-bold transition hover:scale-105",
+							children: [/* @__PURE__ */ jsx("span", {
+								className: "inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-pop-sm",
+								children: /* @__PURE__ */ jsx(Sparkles, { className: "h-4 w-4" })
+							}), "Afaq Munir"]
+						}),
+						/* @__PURE__ */ jsxs("nav", {
+							className: "hidden items-center gap-1 rounded-full bg-muted/60 px-2 py-1 text-sm font-semibold md:flex",
+							children: [
+								/* @__PURE__ */ jsx("a", {
+									href: "#work",
+									className: "rounded-full px-4 py-1.5 transition hover:bg-background hover:text-primary",
+									children: "Work"
+								}),
+								/* @__PURE__ */ jsx("a", {
+									href: "#ads",
+									className: "rounded-full px-4 py-1.5 transition hover:bg-background hover:text-primary",
+									children: "Ads"
+								}),
+								/* @__PURE__ */ jsx(Link, {
+									to: "/watch",
+									className: "rounded-full px-4 py-1.5 transition hover:bg-background hover:text-primary",
+									children: "Watch"
+								}),
+								/* @__PURE__ */ jsx("a", {
+									href: "#story",
+									className: "rounded-full px-4 py-1.5 transition hover:bg-background hover:text-primary",
+									children: "Story"
+								}),
+								/* @__PURE__ */ jsx("a", {
+									href: "#stats",
+									className: "rounded-full px-4 py-1.5 transition hover:bg-background hover:text-primary",
+									children: "Stats"
+								}),
+								/* @__PURE__ */ jsx("a", {
+									href: "#contact",
+									className: "rounded-full px-4 py-1.5 transition hover:bg-background hover:text-primary",
+									children: "Contact"
+								})
+							]
+						}),
+						/* @__PURE__ */ jsxs("div", {
+							className: "flex items-center gap-2 md:gap-4",
+							children: [/* @__PURE__ */ jsx(ThemeToggle, {}), /* @__PURE__ */ jsxs("a", {
+								href: "#contact",
+								className: "hidden items-center gap-1 rounded-full bg-foreground px-4 py-2 text-sm font-bold text-background shadow-pop-sm transition hover:-translate-y-0.5 md:inline-flex",
+								children: ["Collab ", /* @__PURE__ */ jsx(ArrowUpRight, { className: "h-4 w-4" })]
+							})]
+						})
+					]
+				})
+			}),
+			/* @__PURE__ */ jsxs("section", {
+				id: "top",
+				className: "relative mx-auto max-w-6xl px-5 pt-6 pb-24",
+				children: [
+					/* @__PURE__ */ jsx(Star, {
+						className: "pointer-events-none absolute left-6 top-10 h-8 w-8 fill-[var(--color-sun)] text-[var(--color-sun)] animate-float",
+						style: { ["--r"]: "-12deg" }
+					}),
+					/* @__PURE__ */ jsx(Heart, {
+						className: "pointer-events-none absolute right-10 top-24 h-7 w-7 fill-[var(--color-magenta)] text-[var(--color-magenta)] animate-float",
+						style: {
+							animationDelay: "1.2s",
+							["--r"]: "18deg"
+						}
+					}),
+					/* @__PURE__ */ jsx(Sparkles, {
+						className: "pointer-events-none absolute left-1/3 top-2 h-6 w-6 text-[var(--color-sky-pop)] animate-float",
+						style: { animationDelay: "0.6s" }
+					}),
+					/* @__PURE__ */ jsxs("div", {
+						className: "grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr]",
+						children: [/* @__PURE__ */ jsxs("div", { children: [
+							/* @__PURE__ */ jsxs("span", {
+								className: "inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-3 py-1 text-xs font-bold uppercase tracking-wider shadow-pop-sm",
+								children: [/* @__PURE__ */ jsx("span", { className: "h-2 w-2 rounded-full bg-[var(--color-magenta)]" }), " AI Content Creator · Since 10 April"]
+							}),
+							/* @__PURE__ */ jsxs("h1", {
+								className: "mt-6 font-display text-5xl font-bold leading-[0.95] sm:text-6xl md:text-7xl",
+								children: [
+									"I make tiny worlds ",
+									/* @__PURE__ */ jsx("br", {}),
+									/* @__PURE__ */ jsx("span", {
+										className: "bg-gradient-to-r from-[var(--color-magenta)] via-[var(--color-tangerine)] to-[var(--color-sky-pop)] bg-clip-text text-transparent",
+										children: "where monsters read fairy tales."
+									})
+								]
+							}),
+							/* @__PURE__ */ jsxs("p", {
+								className: "mt-6 max-w-xl text-lg text-muted-foreground",
+								children: [
+									"Hey, I'm ",
+									/* @__PURE__ */ jsx("strong", {
+										className: "text-foreground",
+										children: "Afaq Munir"
+									}),
+									" — the creator behind",
+									" ",
+									/* @__PURE__ */ jsx("strong", {
+										className: "text-foreground",
+										children: "PookieToons"
+									}),
+									". I direct AI-animated fairy tales, fruit stories and seasonal dramas, dropped part-by-part for a fast-growing audience across TikTok, Instagram and Facebook."
+								]
+							}),
+							/* @__PURE__ */ jsxs("div", {
+								className: "mt-8 flex flex-wrap gap-3",
+								children: [/* @__PURE__ */ jsxs(Link, {
+									to: "/watch",
+									className: "animate-pop-in inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-bold text-primary-foreground shadow-pop-sm transition hover:-translate-y-0.5 hover:scale-105 active:scale-95",
+									style: { animationDelay: "0.1s" },
+									children: [/* @__PURE__ */ jsx(Play, { className: "h-4 w-4 fill-current" }), " Watch the work"]
+								}), /* @__PURE__ */ jsxs("a", {
+									href: "#contact",
+									className: "animate-pop-in inline-flex items-center gap-2 rounded-full border-2 border-foreground bg-card px-6 py-3 font-bold shadow-pop-sm transition hover:-translate-y-0.5 hover:scale-105 active:scale-95",
+									style: { animationDelay: "0.25s" },
+									children: [/* @__PURE__ */ jsx(Mail, { className: "h-4 w-4" }), " Work with me"]
+								})]
+							}),
+							/* @__PURE__ */ jsxs("div", {
+								className: "mt-10 flex flex-wrap items-center gap-6 text-sm font-semibold text-muted-foreground",
+								children: [/* @__PURE__ */ jsx("div", {
+									className: "flex -space-x-2",
+									children: SOCIALS.map((s) => /* @__PURE__ */ jsx("span", {
+										className: "inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-background text-white",
+										style: { background: s.color },
+										children: /* @__PURE__ */ jsx(s.Icon, { className: "h-4 w-4" })
+									}, s.name))
+								}), /* @__PURE__ */ jsx("span", { children: "50,000+ followers and growing — in under a season." })]
+							})
+						] }), /* @__PURE__ */ jsxs("div", {
+							className: "relative mx-auto w-full max-w-md",
+							children: [/* @__PURE__ */ jsx("div", { className: "absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[var(--color-magenta)] via-[var(--color-tangerine)] to-[var(--color-sky-pop)] opacity-80 blur-2xl" }), /* @__PURE__ */ jsxs("div", {
+								className: "relative rounded-[2.5rem] border-2 border-foreground bg-card p-5 shadow-pop",
+								children: [/* @__PURE__ */ jsxs("div", {
+									className: "relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[var(--color-sun)]/40 via-card to-[var(--color-sky-pop)]/40 p-4",
+									children: [/* @__PURE__ */ jsx(Sparkles, { className: "absolute right-4 top-4 h-5 w-5 text-[var(--color-magenta)]" }), /* @__PURE__ */ jsx("img", {
+										src: pookietoons_logo_default,
+										alt: "PookieToons mascot — a cuddly orange & blue monster reading a storybook",
+										className: "mx-auto w-full max-w-sm animate-float drop-shadow-xl"
+									})]
+								}), /* @__PURE__ */ jsxs("div", {
+									className: "mt-4 flex items-center justify-between px-2",
+									children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("div", {
+										className: "font-display text-xl font-bold",
+										children: "PookieToons"
+									}), /* @__PURE__ */ jsx("div", {
+										className: "text-xs font-semibold text-muted-foreground",
+										children: "The studio · Directed by Afaq Munir"
+									})] }), /* @__PURE__ */ jsx("span", {
+										className: "rounded-full bg-foreground px-3 py-1 text-xs font-bold text-background",
+										children: "EST. APR 2026"
+									})]
+								})]
+							})]
+						})]
+					})
+				]
+			}),
+			/* @__PURE__ */ jsx("div", {
+				className: "overflow-hidden border-y-2 border-foreground bg-foreground py-4 text-background",
+				children: /* @__PURE__ */ jsx("div", {
+					className: "flex w-max animate-marquee gap-12 whitespace-nowrap font-display text-2xl font-bold uppercase",
+					children: Array.from({ length: 2 }).map((_, i) => /* @__PURE__ */ jsxs("div", {
+						className: "flex gap-12",
+						children: [
+							/* @__PURE__ */ jsx("span", { children: "★ AI Animated Fairy Tales" }),
+							/* @__PURE__ */ jsx("span", {
+								className: "text-[var(--color-tangerine)]",
+								children: "★ Fruit Stories"
+							}),
+							/* @__PURE__ */ jsx("span", { children: "★ Drama Shorts" }),
+							/* @__PURE__ */ jsx("span", {
+								className: "text-[var(--color-sky-pop)]",
+								children: "★ Seasonal Specials"
+							}),
+							/* @__PURE__ */ jsx("span", { children: "★ PookieToons Universe" }),
+							/* @__PURE__ */ jsx("span", {
+								className: "text-[var(--color-sun)]",
+								children: "★ Bedtime Magic"
+							})
+						]
+					}, i))
+				})
+			}),
+			/* @__PURE__ */ jsxs("section", {
+				id: "work",
+				className: "mx-auto max-w-6xl px-5 py-24",
+				children: [/* @__PURE__ */ jsxs("div", {
+					className: "flex items-end justify-between gap-6",
+					children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("span", {
+						className: "text-sm font-bold uppercase tracking-wider text-[var(--color-magenta)]",
+						children: "The Series"
+					}), /* @__PURE__ */ jsx("h2", {
+						className: "mt-2 font-display text-4xl font-bold md:text-5xl",
+						children: "What I make on PookieToons"
+					})] }), /* @__PURE__ */ jsx("p", {
+						className: "hidden max-w-sm text-muted-foreground md:block",
+						children: "Short-form, character-led, dropped in parts so the audience keeps coming back for the next episode."
+					})]
+				}), /* @__PURE__ */ jsx("div", {
+					className: "mt-12 grid gap-6 sm:grid-cols-2",
+					children: SERIES.map((s, i) => /* @__PURE__ */ jsxs(Link, {
+						to: "/watch",
+						className: "group relative block rounded-3xl border-2 border-foreground bg-card p-7 shadow-pop-sm transition hover:-translate-y-1 hover:shadow-pop",
+						style: { transform: `rotate(${i % 2 === 0 ? "-0.6deg" : "0.6deg"})` },
+						children: [
+							/* @__PURE__ */ jsxs("div", {
+								className: "mb-5 flex items-center justify-between",
+								children: [/* @__PURE__ */ jsx("div", {
+									className: "inline-flex h-14 w-14 items-center justify-center rounded-2xl border-2 border-foreground text-foreground shadow-pop-sm",
+									style: { background: s.tint },
+									children: /* @__PURE__ */ jsx(s.Icon, { className: "h-6 w-6" })
+								}), /* @__PURE__ */ jsxs("span", {
+									className: "inline-flex items-center gap-1 rounded-full border-2 border-foreground bg-background px-3 py-1 text-xs font-bold opacity-0 transition group-hover:opacity-100",
+									children: ["Watch ", /* @__PURE__ */ jsx(ArrowUpRight, { className: "h-3 w-3" })]
+								})]
+							}),
+							/* @__PURE__ */ jsx("div", {
+								className: "text-xs font-bold uppercase tracking-wider text-muted-foreground",
+								children: s.tag
+							}),
+							/* @__PURE__ */ jsx("h3", {
+								className: "mt-1 font-display text-2xl font-bold",
+								children: s.title
+							}),
+							/* @__PURE__ */ jsx("p", {
+								className: "mt-3 text-muted-foreground",
+								children: s.desc
+							})
+						]
+					}, s.title))
+				})]
+			}),
+			/* @__PURE__ */ jsxs("section", {
+				id: "ads",
+				className: "mx-auto max-w-6xl px-5 py-24",
+				children: [/* @__PURE__ */ jsxs("div", {
+					className: "flex items-end justify-between gap-6",
+					children: [/* @__PURE__ */ jsxs("div", { children: [/* @__PURE__ */ jsx("span", {
+						className: "text-sm font-bold uppercase tracking-wider text-[var(--color-tangerine)]",
+						children: "AI Ads"
+					}), /* @__PURE__ */ jsx("h2", {
+						className: "mt-2 font-display text-4xl font-bold md:text-5xl",
+						children: "Scroll-stopping AI ads"
+					})] }), /* @__PURE__ */ jsx("p", {
+						className: "hidden max-w-sm text-muted-foreground md:block",
+						children: "I also make AI-powered ads for brands — short, character-led and ready to run on the biggest platforms."
+					})]
+				}), /* @__PURE__ */ jsx("div", {
+					className: "mt-12 grid gap-6 sm:grid-cols-2",
+					children: ADS.map((a, i) => /* @__PURE__ */ jsxs("article", {
+						className: "group relative rounded-3xl border-2 border-foreground bg-card p-7 shadow-pop-sm transition hover:-translate-y-1 hover:shadow-pop",
+						style: { transform: `rotate(${i % 2 === 0 ? "0.5deg" : "-0.5deg"})` },
+						children: [
+							/* @__PURE__ */ jsx("div", {
+								className: "mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl border-2 border-foreground text-foreground shadow-pop-sm",
+								style: { background: a.tint },
+								children: /* @__PURE__ */ jsx(a.Icon, { className: "h-6 w-6" })
+							}),
+							/* @__PURE__ */ jsx("div", {
+								className: "text-xs font-bold uppercase tracking-wider text-muted-foreground",
+								children: a.tag
+							}),
+							/* @__PURE__ */ jsx("h3", {
+								className: "mt-1 font-display text-2xl font-bold",
+								children: a.title
+							}),
+							/* @__PURE__ */ jsx("p", {
+								className: "mt-3 text-muted-foreground",
+								children: a.desc
+							})
+						]
+					}, a.title))
+				})]
+			}),
+			/* @__PURE__ */ jsx("section", {
+				id: "story",
+				className: "mx-auto max-w-6xl px-5 py-12",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "grid items-center gap-12 rounded-[2rem] border-2 border-foreground bg-card p-8 shadow-pop md:grid-cols-[1fr_1.2fr] md:p-14",
+					children: [/* @__PURE__ */ jsxs("div", {
+						className: "relative",
+						children: [/* @__PURE__ */ jsx("div", { className: "absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-[var(--color-sky-pop)] to-[var(--color-magenta)] opacity-30 blur-xl" }), /* @__PURE__ */ jsx("img", {
+							src: pookietoons_logo_default,
+							alt: "PookieToons logo",
+							className: "relative mx-auto w-full max-w-xs animate-wiggle rounded-3xl"
+						})]
+					}), /* @__PURE__ */ jsxs("div", { children: [
+						/* @__PURE__ */ jsx("span", {
+							className: "text-sm font-bold uppercase tracking-wider text-[var(--color-tangerine)]",
+							children: "My Story"
+						}),
+						/* @__PURE__ */ jsx("h2", {
+							className: "mt-2 font-display text-4xl font-bold",
+							children: "From a single upload to 50K+ in one season."
+						}),
+						/* @__PURE__ */ jsxs("p", {
+							className: "mt-5 text-lg text-muted-foreground",
+							children: [
+								"I started ",
+								/* @__PURE__ */ jsx("strong", {
+									className: "text-foreground",
+									children: "PookieToons on 10 April"
+								}),
+								" with a simple idea: use AI to bring back the feeling of bedtime stories — bright characters, kind worlds, tiny lessons. A few episodes in, the audience exploded."
+							]
+						}),
+						/* @__PURE__ */ jsx("p", {
+							className: "mt-4 text-lg text-muted-foreground",
+							children: "Today I write, direct and animate every episode myself — fairy tales, fruit stories, drama shorts and seasonal specials, released part-by-part across three platforms."
+						})
+					] })]
+				})
+			}),
+			/* @__PURE__ */ jsx("section", {
+				id: "watch",
+				className: "mx-auto max-w-6xl px-5 py-24",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "relative overflow-hidden rounded-[2rem] border-2 border-foreground bg-card p-10 text-center shadow-pop md:p-14",
+					children: [
+						/* @__PURE__ */ jsx("span", {
+							className: "text-sm font-bold uppercase tracking-wider text-[var(--color-magenta)]",
+							children: "The Watch Room"
+						}),
+						/* @__PURE__ */ jsx("h2", {
+							className: "mt-2 font-display text-4xl font-bold md:text-5xl",
+							children: "Ready to press play?"
+						}),
+						/* @__PURE__ */ jsx("p", {
+							className: "mx-auto mt-4 max-w-xl text-muted-foreground",
+							children: "Every episode I've dropped — fairy tales, fruit stories and drama shorts — lives on one page. Pick any tile and dive in."
+						}),
+						/* @__PURE__ */ jsxs(Link, {
+							to: "/watch",
+							className: "mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-bold text-primary-foreground shadow-pop-sm transition hover:-translate-y-0.5 hover:scale-105",
+							children: [/* @__PURE__ */ jsx(Play, { className: "h-4 w-4 fill-current" }), " Open the Watch Room"]
+						})
+					]
+				})
+			}),
+			/* @__PURE__ */ jsxs("section", {
+				id: "stats",
+				className: "mx-auto max-w-6xl px-5 py-24",
+				children: [/* @__PURE__ */ jsxs("div", {
+					className: "text-center",
+					children: [/* @__PURE__ */ jsx("span", {
+						className: "text-sm font-bold uppercase tracking-wider text-[var(--color-sky-pop)]",
+						children: "Where to watch"
+					}), /* @__PURE__ */ jsx("h2", {
+						className: "mt-2 font-display text-4xl font-bold md:text-5xl",
+						children: "The PookieToons universe lives here"
+					})]
+				}), /* @__PURE__ */ jsx("div", {
+					className: "mt-12 grid gap-6 md:grid-cols-3",
+					children: SOCIALS.map((s, i) => /* @__PURE__ */ jsxs("a", {
+						href: s.url,
+						target: "_blank",
+						rel: "noreferrer",
+						className: "group relative overflow-hidden rounded-3xl border-2 border-foreground bg-card p-7 shadow-pop-sm transition hover:-translate-y-1 hover:shadow-pop",
+						style: { transform: `rotate(${[
+							-1,
+							.5,
+							-.5
+						][i]}deg)` },
+						children: [
+							/* @__PURE__ */ jsx("div", {
+								className: "absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-30 blur-2xl transition group-hover:opacity-60",
+								style: { background: s.color }
+							}),
+							/* @__PURE__ */ jsxs("div", {
+								className: "relative flex items-center justify-between",
+								children: [/* @__PURE__ */ jsx("span", {
+									className: "inline-flex h-12 w-12 items-center justify-center rounded-2xl border-2 border-foreground text-white shadow-pop-sm",
+									style: { background: s.color },
+									children: /* @__PURE__ */ jsx(s.Icon, { className: "h-5 w-5" })
+								}), /* @__PURE__ */ jsx(ArrowUpRight, { className: "h-5 w-5 transition group-hover:rotate-45" })]
+							}),
+							/* @__PURE__ */ jsx("div", {
+								className: "relative mt-6 font-display text-5xl font-bold",
+								children: s.followers
+							}),
+							/* @__PURE__ */ jsxs("div", {
+								className: "relative mt-1 text-sm font-semibold text-muted-foreground",
+								children: ["followers on ", s.name]
+							}),
+							/* @__PURE__ */ jsxs("div", {
+								className: "relative mt-4 flex items-center justify-between border-t-2 border-dashed border-border pt-4 text-sm",
+								children: [/* @__PURE__ */ jsx("span", {
+									className: "font-bold",
+									children: s.handle
+								}), /* @__PURE__ */ jsx("span", {
+									className: "text-muted-foreground",
+									children: s.meta
+								})]
+							})
+						]
+					}, s.name))
+				})]
+			}),
+			/* @__PURE__ */ jsx("section", {
+				id: "contact",
+				className: "mx-auto max-w-6xl px-5 pb-24",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "relative overflow-hidden rounded-[2.5rem] border-2 border-foreground bg-gradient-to-br from-[var(--color-magenta)] via-[var(--color-tangerine)] to-[var(--color-sky-pop)] p-10 text-center shadow-pop md:p-16",
+					children: [
+						/* @__PURE__ */ jsx(Star, { className: "absolute left-8 top-8 h-10 w-10 fill-white/90 text-white animate-spin-slow" }),
+						/* @__PURE__ */ jsx(Sparkles, { className: "absolute right-10 top-10 h-8 w-8 text-white animate-float" }),
+						/* @__PURE__ */ jsx(Heart, {
+							className: "absolute bottom-8 left-1/4 h-7 w-7 fill-white text-white animate-float",
+							style: { animationDelay: "1s" }
+						}),
+						/* @__PURE__ */ jsx("h2", {
+							className: "font-display text-4xl font-bold text-white md:text-6xl",
+							children: "Let's make something cute together."
+						}),
+						/* @__PURE__ */ jsx("p", {
+							className: "mx-auto mt-4 max-w-xl text-white/90",
+							children: "Brand collabs, sponsored episodes, custom AI animation, character cameos — DM me on any platform or send a quick email."
+						}),
+						/* @__PURE__ */ jsxs("div", {
+							className: "mt-8 flex flex-wrap justify-center gap-3",
+							children: [
+								/* @__PURE__ */ jsxs("a", {
+									href: "mailto:afaqmunir456@gmai.com",
+									className: "animate-pop-in animate-glow-pulse inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 font-bold text-background shadow-pop-sm transition hover:-translate-y-0.5 hover:scale-105 hover:animate-bob active:scale-95",
+									style: { animationDelay: "0.1s" },
+									children: [/* @__PURE__ */ jsx(Mail, { className: "h-4 w-4" }), " afaqmunir456@gmai.com"]
+								}),
+								/* @__PURE__ */ jsxs("a", {
+									href: "https://www.tiktok.com/@pookiiee_toons",
+									target: "_blank",
+									rel: "noreferrer",
+									className: "animate-pop-in inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-bold shadow-pop-sm transition hover:-translate-y-0.5 hover:scale-105 hover:animate-bob active:scale-95",
+									style: { animationDelay: "0.2s" },
+									children: [/* @__PURE__ */ jsx(Music2, { className: "h-4 w-4" }), " Follow on TikTok"]
+								}),
+								/* @__PURE__ */ jsxs("a", {
+									href: "https://www.instagram.com/pookiie_toons/",
+									target: "_blank",
+									rel: "noreferrer",
+									className: "animate-pop-in inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-bold shadow-pop-sm transition hover:-translate-y-0.5 hover:scale-105 hover:animate-bob active:scale-95",
+									style: { animationDelay: "0.3s" },
+									children: [/* @__PURE__ */ jsx(Instagram, { className: "h-4 w-4" }), " DM on Instagram"]
+								}),
+								/* @__PURE__ */ jsxs("a", {
+									href: "https://www.facebook.com/profile.php?id=61588215682177",
+									target: "_blank",
+									rel: "noreferrer",
+									className: "animate-pop-in inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-bold shadow-pop-sm transition hover:-translate-y-0.5 hover:scale-105 hover:animate-bob active:scale-95",
+									style: { animationDelay: "0.4s" },
+									children: [/* @__PURE__ */ jsx(Facebook, { className: "h-4 w-4" }), " Like on Facebook"]
+								})
+							]
+						})
+					]
+				})
+			}),
+			/* @__PURE__ */ jsx("footer", {
+				className: "border-t-2 border-foreground/10",
+				children: /* @__PURE__ */ jsxs("div", {
+					className: "mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-8 text-sm font-semibold text-muted-foreground md:flex-row",
+					children: [/* @__PURE__ */ jsxs("div", {
+						className: "flex items-center gap-2",
+						children: [
+							/* @__PURE__ */ jsx("img", {
+								src: pookietoons_logo_default,
+								alt: "",
+								className: "h-7 w-7 rounded-full"
+							}),
+							"© ",
+							(/* @__PURE__ */ new Date()).getFullYear(),
+							" Afaq Munir · PookieToons"
+						]
+					}), /* @__PURE__ */ jsx("div", { children: "Made with AI, color and a lot of caffeine ✦" })]
+				})
+			})
+		]
+	});
+}
+//#endregion
+export { Portfolio as component };

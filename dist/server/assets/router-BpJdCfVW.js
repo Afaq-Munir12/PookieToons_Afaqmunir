@@ -1,0 +1,219 @@
+import { t as pookietoons_logo_default } from "./pookietoons-logo-Cf5M0_yj.js";
+import { HeadContent, Link, Outlet, Scripts, createFileRoute, createRootRouteWithContext, createRouter, lazyRouteComponent, useRouter } from "@tanstack/react-router";
+import { jsx, jsxs } from "react/jsx-runtime";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+//#region src/styles.css?url
+var styles_default = "/assets/styles-DQWPXYeB.css";
+//#endregion
+//#region src/routes/__root.tsx
+function NotFoundComponent() {
+	return /* @__PURE__ */ jsx("div", {
+		className: "flex min-h-screen items-center justify-center bg-background px-4",
+		children: /* @__PURE__ */ jsxs("div", {
+			className: "max-w-md text-center",
+			children: [
+				/* @__PURE__ */ jsx("h1", {
+					className: "text-7xl font-bold text-foreground",
+					children: "404"
+				}),
+				/* @__PURE__ */ jsx("h2", {
+					className: "mt-4 text-xl font-semibold text-foreground",
+					children: "Page not found"
+				}),
+				/* @__PURE__ */ jsx("p", {
+					className: "mt-2 text-sm text-muted-foreground",
+					children: "The page you're looking for doesn't exist or has been moved."
+				}),
+				/* @__PURE__ */ jsx("div", {
+					className: "mt-6",
+					children: /* @__PURE__ */ jsx(Link, {
+						to: "/",
+						className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
+						children: "Go home"
+					})
+				})
+			]
+		})
+	});
+}
+function ErrorComponent({ error, reset }) {
+	console.error(error);
+	const router = useRouter();
+	return /* @__PURE__ */ jsx("div", {
+		className: "flex min-h-screen items-center justify-center bg-background px-4",
+		children: /* @__PURE__ */ jsxs("div", {
+			className: "max-w-md text-center",
+			children: [
+				/* @__PURE__ */ jsx("h1", {
+					className: "text-xl font-semibold tracking-tight text-foreground",
+					children: "This page didn't load"
+				}),
+				/* @__PURE__ */ jsx("p", {
+					className: "mt-2 text-sm text-muted-foreground",
+					children: "Something went wrong on our end. You can try refreshing or head back home."
+				}),
+				/* @__PURE__ */ jsxs("div", {
+					className: "mt-6 flex flex-wrap justify-center gap-2",
+					children: [/* @__PURE__ */ jsx("button", {
+						onClick: () => {
+							router.invalidate();
+							reset();
+						},
+						className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
+						children: "Try again"
+					}), /* @__PURE__ */ jsx("a", { children: "href=\"/\" className=\"inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent\" Go home" })]
+				})
+			]
+		})
+	});
+}
+var Route$2 = createRootRouteWithContext()({
+	head: () => ({
+		meta: [
+			{ charSet: "utf-8" },
+			{
+				name: "viewport",
+				content: "width=device-width, initial-scale=1"
+			},
+			{ title: "Afaq Munir — AI Storyteller behind PookieToons" },
+			{
+				name: "description",
+				content: "Afaq Munir — AI animated fairy tales, fruit stories & seasonal dramas. 50K+ followers across TikTok, Instagram & Facebook."
+			},
+			{
+				name: "author",
+				content: "Afaq Munir"
+			},
+			{
+				property: "og:title",
+				content: "Afaq Munir — PookieToons"
+			},
+			{
+				property: "og:description",
+				content: "Animated AI fairy tales, fruit stories & seasonal dramas."
+			},
+			{
+				property: "og:type",
+				content: "website"
+			},
+			{
+				name: "twitter:card",
+				content: "summary_large_image"
+			}
+		],
+		links: [
+			{
+				rel: "stylesheet",
+				href: styles_default
+			},
+			{
+				rel: "preconnect",
+				href: "https://fonts.googleapis.com"
+			},
+			{
+				rel: "preconnect",
+				href: "https://fonts.gstatic.com",
+				crossOrigin: "anonymous"
+			},
+			{
+				rel: "stylesheet",
+				href: "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap"
+			}
+		]
+	}),
+	shellComponent: RootShell,
+	component: RootComponent,
+	notFoundComponent: NotFoundComponent,
+	errorComponent: ErrorComponent
+});
+function RootShell({ children }) {
+	return /* @__PURE__ */ jsxs("html", {
+		lang: "en",
+		children: [/* @__PURE__ */ jsx("head", { children: /* @__PURE__ */ jsx(HeadContent, {}) }), /* @__PURE__ */ jsxs("body", { children: [children, /* @__PURE__ */ jsx(Scripts, {})] })]
+	});
+}
+function RootComponent() {
+	const { queryClient } = Route$2.useRouteContext();
+	return /* @__PURE__ */ jsx(QueryClientProvider, {
+		client: queryClient,
+		children: /* @__PURE__ */ jsx(Outlet, {})
+	});
+}
+//#endregion
+//#region src/routes/watch.tsx
+var $$splitComponentImporter$1 = () => import("./watch-Bymw56G4.js");
+var Route$1 = createFileRoute("/watch")({
+	head: () => ({ meta: [
+		{ title: "Watch PookieToons — Afaq Munir's AI stories" },
+		{
+			name: "description",
+			content: "Watch AI-animated fairy tales, fruit stories and drama shorts from PookieToons — embedded from TikTok, Instagram and Facebook."
+		},
+		{
+			property: "og:title",
+			content: "Watch PookieToons"
+		},
+		{
+			property: "og:description",
+			content: "AI-animated fairy tales, fruit stories & drama shorts by Afaq Munir."
+		}
+	] }),
+	component: lazyRouteComponent($$splitComponentImporter$1, "component")
+});
+//#endregion
+//#region src/routes/index.tsx
+var $$splitComponentImporter = () => import("./routes-Cn0wiyAG.js");
+var Route = createFileRoute("/")({
+	head: () => ({ meta: [
+		{ title: "Afaq Munir — AI Storyteller behind PookieToons" },
+		{
+			name: "description",
+			content: "Portfolio of Afaq Munir — AI animated fairy tales, fruit stories & seasonal dramas. 50K+ followers across TikTok, Instagram and Facebook."
+		},
+		{
+			property: "og:title",
+			content: "Afaq Munir — PookieToons"
+		},
+		{
+			property: "og:description",
+			content: "AI animated fairy tales & fruit stories. 50K+ followers across socials."
+		},
+		{
+			property: "og:image",
+			content: pookietoons_logo_default
+		},
+		{
+			name: "twitter:image",
+			content: pookietoons_logo_default
+		}
+	] }),
+	component: lazyRouteComponent($$splitComponentImporter, "component")
+});
+//#endregion
+//#region src/routeTree.gen.ts
+var WatchRoute = Route$1.update({
+	id: "/watch",
+	path: "/watch",
+	getParentRoute: () => Route$2
+});
+var rootRouteChildren = {
+	IndexRoute: Route.update({
+		id: "/",
+		path: "/",
+		getParentRoute: () => Route$2
+	}),
+	WatchRoute
+};
+var routeTree = Route$2._addFileChildren(rootRouteChildren)._addFileTypes();
+//#endregion
+//#region src/router.tsx
+var getRouter = () => {
+	return createRouter({
+		routeTree,
+		context: { queryClient: new QueryClient() },
+		scrollRestoration: true,
+		defaultPreloadStaleTime: 0
+	});
+};
+//#endregion
+export { getRouter };
