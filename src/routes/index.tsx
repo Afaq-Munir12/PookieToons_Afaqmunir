@@ -318,7 +318,7 @@ function Portfolio() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a href="mailto:afaqmunir456@gmai.com" className="animate-pop-in animate-glow-pulse inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 font-bold text-background shadow-pop-sm transition hover:-translate-y-0.5 hover:scale-105 hover:animate-bob active:scale-95" style={{ animationDelay: "0.1s" }}>
-              <Mail className="h-4 w-4" /> afaqmunir456@gmai.com
+              <Mail className="h-4 w-4" /> afaqmunir456@gmail.com
             </a>
             <a href="https://www.tiktok.com/@pookiiee_toons" target="_blank" rel="noreferrer" className="animate-pop-in inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-bold shadow-pop-sm transition hover:-translate-y-0.5 hover:scale-105 hover:animate-bob active:scale-95" style={{ animationDelay: "0.2s" }}>
               <Music2 className="h-4 w-4" /> Follow on TikTok
